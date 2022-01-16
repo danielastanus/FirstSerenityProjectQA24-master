@@ -4,7 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class CheckoutPage extends PageObject {
+public class CheckoutPage extends BasePage {
 
     @FindBy (id = "billing:company")
     private WebElementFacade companyBillingField;
@@ -27,6 +27,9 @@ public class CheckoutPage extends PageObject {
 
     @FindBy (id = "billing:telephone")
     private WebElementFacade telephoneBillingField;
+
+    @FindBy (css = "#billing-buttons-container > button")
+    private WebElementFacade continueBillingButton;
 
 
 
@@ -58,6 +61,10 @@ public class CheckoutPage extends PageObject {
 
     public void setTelephoneBillingField(String telephoneNumber){
         typeInto(telephoneBillingField, telephoneNumber);
+    }
+
+    public void clickContinueBillingButton(){
+        clickOn(continueBillingButton);
     }
 
 }

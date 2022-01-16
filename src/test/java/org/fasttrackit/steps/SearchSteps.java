@@ -7,10 +7,7 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.SearchResultsPage;
 import org.junit.Assert;
 
-public class SearchSteps extends ScenarioSteps {
-
-    private HomePage homePage;
-    private SearchResultsPage searchResultsPage;
+public class SearchSteps extends BaseSteps {
 
     @Step
     public void navigateToHomePage(){

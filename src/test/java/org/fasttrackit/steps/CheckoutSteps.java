@@ -4,14 +4,7 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.*;
 
-public class CheckoutSteps extends ScenarioSteps {
-    private HomePage homePage;
-    private LoginPage loginPage;
-    private MyAccountPage myAccountPage;
-    private SearchResultsPage searchResultsPage;
-    private ProductPage productPage;
-    private CartPage cartPage;
-
+public class CheckoutSteps extends BaseSteps {
 
     @Step
     public void completeCheckoutFormDropdown(){
@@ -27,5 +20,22 @@ public class CheckoutSteps extends ScenarioSteps {
     @Step
     public void clickProceedButton(){
         cartPage.clickProceedCheckoutButton();
+    }
+    @Step
+    public void completeBillingInformation(String companyName, String address, String cityName, String zip, String telephone){
+        checkoutPage.setCompanyBillingField(companyName);
+        checkoutPage.setAddressBillingField(address);
+        checkoutPage.setCityBillingField(cityName);
+        checkoutPage.setPostcodeBillingField(zip);
+        checkoutPage.setTelephoneBillingField(telephone);
+    }
+    @Step
+    public void selectFromDropdown(){
+        checkoutPage.selectCountryFromDropdown();
+        checkoutPage.selectRegionFromDropdown();
+    }
+    @Step
+    public void clickContinueBilling(){
+        checkoutPage.clickContinueBillingButton();
     }
 }

@@ -10,4 +10,9 @@ public class SearchTest extends BaseTest{
         searchSteps.findAndOpenProduct( "SILVER DESERT NECKLACE");
     }
 
+    @Test
+    public void searchTest(){
+        searchSteps.executeSearch("");
+    }
+
 }

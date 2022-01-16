@@ -4,7 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class RegisterPage extends PageObject {
+public class RegisterPage extends BasePage {
 
     @FindBy (css = "#firstname")
     private WebElementFacade firstNameField;

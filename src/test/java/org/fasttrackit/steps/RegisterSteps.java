@@ -7,11 +7,7 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.MyAccountPage;
 import org.fasttrackit.pages.RegisterPage;
 
-public class RegisterSteps extends ScenarioSteps {
-
-    private HomePage homePage;
-    private RegisterPage registerPage;
-    private MyAccountPage accountPage;
+public class RegisterSteps extends BaseSteps {
 
     @Step
     public void navigateToHomePage(){
@@ -46,6 +42,6 @@ public class RegisterSteps extends ScenarioSteps {
 
     @Step
     public void registerConfirmation(String userName){
-        accountPage.checkRegister(userName);
+        myAccountPage.checkRegister(userName);
     }
 }
